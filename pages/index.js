@@ -14,7 +14,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<h1 className="text-3xl font-bold underline">Welcome to NomdHouse</h1>
+				<h1 className="text-3xl font-bold underline">Welcome to NomadHouse</h1>
 				{/* eslint-disable-next-line react/no-unescaped-entities */}
 				<p>Let's rock the Chainlink Hackathon!</p>
 			</main>
