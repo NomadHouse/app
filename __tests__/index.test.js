@@ -5,10 +5,8 @@ describe('Home', () => {
 	it('renders a heading', () => {
 		render(<Home />);
 
-		const heading = screen.getByRole('heading', {
-			name: /Welcome to NomadHouse/i,
-		});
+		const homePageTitle = screen.getByText('Inspiration for your next adventure');
 
-		expect(heading).toBeInTheDocument();
+		expect(homePageTitle).toBeInTheDocument();
 	});
 });
