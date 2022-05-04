@@ -1,7 +1,13 @@
 module.exports = {
 	content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				violet: '#9d5af4',
+				'violet-light': '#cba8f9',
+				white: '#ffffff',
+			},
+		},
 	},
 	plugins: [],
 };
