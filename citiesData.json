@@ -1,0 +1,32 @@
+[
+	{
+		"id": 1,
+		"city": "New York",
+		"country": "United States",
+		"ranking": 59,
+		"mbps": 35,
+		"price": "5,300",
+		"weather": "Sunny",
+		"image": "york"
+	},
+	{
+		"id": 2,
+		"city": "Berlin",
+		"country": "Germany",
+		"ranking": 28,
+		"mbps": 24,
+		"price": "3,630",
+		"weather": "Rainy",
+		"image": "berlin"
+	},
+	{
+		"id": 3,
+		"city": "Medellin",
+		"country": "Colombia",
+		"ranking": 33,
+		"mbps": 6,
+		"price": "5,830",
+		"weather": "Sunny",
+		"image": "medellin"
+	}
+]

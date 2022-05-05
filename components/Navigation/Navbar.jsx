@@ -47,7 +47,7 @@ const Navbar = () => {
 					dispatch(setUserWalletAddress(user.get('ethAddress')));
 				})
 				.catch(function (error) {
-					console.log(error);
+					console.error(error);
 				});
 		}
 		Modal.close();
