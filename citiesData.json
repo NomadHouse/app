@@ -28,5 +28,35 @@
 		"price": "5,830",
 		"weather": "Sunny",
 		"image": "medellin"
+	},
+	{
+		"id": 4,
+		"city": "Barcelona",
+		"country": "Spain",
+		"ranking": 23,
+		"mbps": 54,
+		"price": "4,890",
+		"weather": "Sunny",
+		"image": "barcelona"
+	},
+	{
+		"id": 5,
+		"city": "London",
+		"country": "United Kingdom",
+		"ranking": 12,
+		"mbps": 19,
+		"price": "2,876",
+		"weather": "Cloudy",
+		"image": "london"
+	},
+	{
+		"id": 6,
+		"city": "Paris",
+		"country": "France",
+		"ranking": 21,
+		"mbps": 28,
+		"price": "3,100",
+		"weather": "Sunny",
+		"image": "paris"
 	}
 ]

@@ -4,7 +4,7 @@ import { faWifi } from '@fortawesome/free-solid-svg-icons';
 const MarketPlaceCard = ({ ranking, mbps, city, country, weather, price, image }) => {
 	return (
 		<div
-			className={`bg-blue-300 w-auto h-auto rounded-xl p-6 m-4 space-y-4 text-white bg-cover bg-opacity-10 bg-${image}`}
+			className={`bg-blue-300 w-auto h-auto rounded-xl p-6 m-4 space-y-4 text-white bg-cover bg-opacity-10 ${image}`}
 		>
 			{/* Top information */}
 			<div className="flex justify-between text-shadow shadow-black pb-12">

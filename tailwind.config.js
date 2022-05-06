@@ -10,9 +10,12 @@ module.exports = {
 				black: '#000000',
 			},
 			backgroundImage: {
-				york: "url('/cities_images/new_york.jpeg')",
-				medellin: "url('/cities_images/medellin.jpeg')",
-				berlin: "url('/cities_images/berlin.jpeg')",
+				york: "url('/static/images/new_york.jpeg')",
+				medellin: "url('/static/images/medellin.jpeg')",
+				berlin: "url('/static/images/berlin.jpeg')",
+				paris: "url('/static/images/paris.jpeg')",
+				london: "url('/static/images/london.jpeg')",
+				barcelona: "url('/static/images/barcelona.jpeg')",
 			},
 			textShadow: {
 				sm: '0 1px 2px var(--tw-shadow-color)',

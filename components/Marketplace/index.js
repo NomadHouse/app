@@ -16,7 +16,21 @@ const Marketplace = () => {
 						return (
 							<Card
 								key={city.id}
-								image={city.image}
+								image={
+									city.image === 'york'
+										? 'bg-york'
+										: city.image === 'medellin'
+										? 'bg-medellin'
+										: city.image === 'berlin'
+										? 'bg-berlin'
+										: city.image === 'paris'
+										? 'bg-paris'
+										: city.image === 'london'
+										? 'bg-london'
+										: city.image === 'barcelona'
+										? 'bg-barcelona'
+										: null
+								}
 								city={city.city}
 								country={city.country}
 								ranking={city.ranking}
