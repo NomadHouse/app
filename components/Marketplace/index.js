@@ -15,7 +15,6 @@ const Marketplace = () => {
 					cities.map((city) => {
 						return (
 							<Card
-								key={city.id}
 								image={
 									city.image === 'york'
 										? 'bg-york'
@@ -31,6 +30,8 @@ const Marketplace = () => {
 										? 'bg-barcelona'
 										: null
 								}
+								key={city.id}
+								href={`/city/${city.city}/${city.country}/${city.lat}/${city.long}`}
 								city={city.city}
 								country={city.country}
 								ranking={city.ranking}
@@ -40,11 +41,6 @@ const Marketplace = () => {
 							/>
 						);
 					})}
-				{/* <Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card /> */}
 			</CardsWrapper>
 		</>
 	);

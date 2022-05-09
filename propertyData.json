@@ -1,0 +1,92 @@
+[
+	{
+		"id": 1,
+		"city": "Barcelona",
+		"country": "Spain",
+		"properties": [
+			{
+				"id": 1,
+				"imageFile": "https://cf.bstatic.com/xdata/images/xphoto/max1440/48385979.jpg?k=b272edff1b33a021ff1ea77bdf59c30fa48141d7fc243a72a872568f58488848&o=",
+				"price": "2.350",
+				"description": "Beautiful property in the center of Barcelona",
+				"address": "Carrer de la Rambla, 1, 08001 Barcelona, Spain",
+				"propertyManager": "Nuñez y Navarro",
+				"lat": 41.38879,
+				"long": 2.15899
+			},
+			{
+				"id": 2,
+				"imageFile": "https://cf.bstatic.com/xdata/images/xphoto/max1440/48385979.jpg?k=b272edff1b33a021ff1ea77bdf59c30fa48141d7fc243a72a872568f58488848&o=",
+				"price": "2.350",
+				"description": "Beautiful property in the center of Barcelona",
+				"address": "Carrer de la Rambla, 1, 08001 Barcelona, Spain",
+				"propertyManager": "Nuñez y Navarro",
+				"lat": 41.415392,
+				"long": 2.202586
+			},
+			{
+				"id": 3,
+				"imageFile": "https://cf.bstatic.com/xdata/images/xphoto/max1440/48385979.jpg?k=b272edff1b33a021ff1ea77bdf59c30fa48141d7fc243a72a872568f58488848&o=",
+				"price": "2.350",
+				"description": "Beautiful property in the center of Barcelona",
+				"address": "Carrer de la Rambla, 1, 08001 Barcelona, Spain",
+				"propertyManager": "Nuñez y Navarro",
+				"lat": 41.408496,
+				"long": 2.153532
+			},
+			{
+				"id": 4,
+				"imageFile": "https://cf.bstatic.com/xdata/images/xphoto/max1440/48385979.jpg?k=b272edff1b33a021ff1ea77bdf59c30fa48141d7fc243a72a872568f58488848&o=",
+				"price": "2.350",
+				"description": "Beautiful property in the center of Barcelona",
+				"address": "Carrer de la Rambla, 1, 08001 Barcelona, Spain",
+				"propertyManager": "Nuñez y Navarro",
+				"lat": 41.386283,
+				"long": 2.151268
+			},
+			{
+				"id": 5,
+				"imageFile": "https://cf.bstatic.com/xdata/images/xphoto/max1440/48385979.jpg?k=b272edff1b33a021ff1ea77bdf59c30fa48141d7fc243a72a872568f58488848&o=",
+				"price": "2.350",
+				"description": "Beautiful property in the center of Barcelona",
+				"address": "Carrer de la Rambla, 1, 08001 Barcelona, Spain",
+				"propertyManager": "Nuñez y Navarro",
+				"lat": 41.380671,
+				"long": 2.172912
+			},
+			{
+				"id": 6,
+				"imageFile": "https://cf.bstatic.com/xdata/images/xphoto/max1440/48385979.jpg?k=b272edff1b33a021ff1ea77bdf59c30fa48141d7fc243a72a872568f58488848&o=",
+				"price": "2.350",
+				"description": "Beautiful property in the center of Barcelona",
+				"address": "Carrer de la Rambla, 1, 08001 Barcelona, Spain",
+				"propertyManager": "Nuñez y Navarro",
+				"lat": 41.392228,
+				"long": 2.197867
+			}
+		]
+	},
+	{
+		"id": 2,
+		"city": "New York",
+		"country": "United States",
+		"properties": [
+			{
+				"id": 1,
+				"imageFile": "",
+				"price": "",
+				"description": "",
+				"addres": "",
+				"propertyManager": ""
+			},
+			{
+				"id": 2,
+				"imageFile": "",
+				"price": "",
+				"description": "",
+				"addres": "",
+				"propertyManager": ""
+			}
+		]
+	}
+]

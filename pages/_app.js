@@ -24,9 +24,7 @@ function MyApp({ Component, pageProps }) {
 			<PersistGate loading={null} persistor={persistor}>
 				<MoralisProvider serverUrl={process.env.NEXT_PUBLIC_SERVER_URL} appId={process.env.NEXT_PUBLIC_APP_ID}>
 					<Navbar />
-					<ContentWrapper>
-						<Component {...pageProps} />
-					</ContentWrapper>
+					<Component {...pageProps} />
 				</MoralisProvider>
 			</PersistGate>
 		</Provider>

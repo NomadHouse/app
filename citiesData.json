@@ -7,7 +7,9 @@
 		"mbps": 35,
 		"price": "5,300",
 		"weather": "Sunny",
-		"image": "york"
+		"image": "york",
+		"lat": 40.71427,
+		"long": -74.00597
 	},
 	{
 		"id": 2,
@@ -17,7 +19,9 @@
 		"mbps": 24,
 		"price": "3,630",
 		"weather": "Rainy",
-		"image": "berlin"
+		"image": "berlin",
+		"lat": 52.52437,
+		"long": 13.41053
 	},
 	{
 		"id": 3,
@@ -27,7 +31,9 @@
 		"mbps": 6,
 		"price": "5,830",
 		"weather": "Sunny",
-		"image": "medellin"
+		"image": "medellin",
+		"lat": 6.2455955,
+		"long": -75.5737035
 	},
 	{
 		"id": 4,
@@ -37,7 +43,9 @@
 		"mbps": 54,
 		"price": "4,890",
 		"weather": "Sunny",
-		"image": "barcelona"
+		"image": "barcelona",
+		"lat": 41.38879,
+		"long": 2.15899
 	},
 	{
 		"id": 5,
@@ -47,7 +55,9 @@
 		"mbps": 19,
 		"price": "2,876",
 		"weather": "Cloudy",
-		"image": "london"
+		"image": "london",
+		"lat": 51.50853,
+		"long": -0.12574
 	},
 	{
 		"id": 6,
@@ -57,6 +67,8 @@
 		"mbps": 28,
 		"price": "3,100",
 		"weather": "Sunny",
-		"image": "paris"
+		"image": "paris",
+		"lat": 48.85341,
+		"long": 2.3488
 	}
 ]
