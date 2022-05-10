@@ -2,50 +2,29 @@
 
 # Nomad House
 
--   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+-   An on-chain marketplace of fractional real estate. We're targeting the growing group of digital nomads who want to own fractions of property in their favorite cities in a completely liquid marketplace.
 
 ## Demo
 
-Insert gif or link to demo
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Acknowledgements
-
--   [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
--   [Awesome README](https://github.com/matiassingers/awesome-readme)
--   [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-## Sponsors / Interested people...
-
-This project is used by the following companies:
-
--   Company 1
--   Company 2
+Live dev build: [HERE](https://development--nomad-house.netlify.app)
 
 ## Features
 
--   Fetch blog posts from an external API
--   Show up to 100 posts
--   Click on a post to read the content and see the static image displayed
--   Let users send feedback about the page
+-   Marketplace
+-   Wallet based authentication
+-   Property Search
 
 ## Roadmap
 
--   Additional browser support
-
--   Add more integrations
+-   TBD
 
 ## Tech Stack
 
 -   NextJs
--   TypeScript
--   Styled-Components
--   Placeholder API
+-   Moralis
+-   Pigeon Maps
+-   TailwindCSS
 -   Netlify - GitHub auto deploy to production from commit
--   Netlify forms to handle user's feedback data
 
 ## Packages
 
@@ -53,17 +32,13 @@ This project is used by the following companies:
 
 ## Authors
 
--   [@katherinepeterson](https://www.github.com/octokatherine)
+-   [@adrianpaniaguasanchez](https://github.com/paniaguaadrian)
+-   [@willblase](https://github.com/williamdanger)
+-   [@chrisr](https://github.com/FuzzB0t)
 
 ## FAQ
 
-#### Who is the author of this project?
 
-Answer 1
-
-#### Question 2
-
-Answer 2
 
 ## Installation
 
@@ -100,3 +75,11 @@ Answer 2
 ```bash
   npx prettier --write . // Will prettier all the files except .next, coverage, node_modules
 ```
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgements
+
+-   [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
