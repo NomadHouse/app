@@ -1,15 +1,12 @@
 import Card from './Card';
-import SearchBar from './SearchBar';
-import Title from './Title';
-import CardsWrapper from '../UI/CardsWrapper';
 
-import cities from '../../citiesData.json';
+import CardsWrapper from 'components/UI/CardsWrapper';
+
+import cities from 'citiesData.json';
 
 const Marketplace = () => {
 	return (
 		<>
-			<SearchBar />
-			<Title title="Inspiration for your next adventure" />
 			<CardsWrapper>
 				{cities &&
 					cities.map((city) => {

@@ -1,4 +1,4 @@
-import Header from '../../components/Header/CustomHeader';
+import Header from 'components/Header/CustomHeader';
 
 const Portfolio = () => {
 	return (

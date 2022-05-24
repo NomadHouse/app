@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useMoralis } from 'react-moralis';
 
 // Redux Store
-import { setUserWalletAddress } from '../../features/user/userSlice';
-import { persistor } from '../../app/store';
+import { setUserWalletAddress } from 'features/user/userSlice';
+import { persistor } from 'app/store';
 import { useDispatch, useSelector } from 'react-redux';
 
 // Setup Modal Library
@@ -12,8 +12,8 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 // Custom Components - Modals (popups)
-import MetamaskWalletModal from '../Modals/MetamaskModal';
-import SettingsModal from '../Modals/SettingsModal';
+import MetamaskWalletModal from 'components/Modals/MetamaskModal';
+import SettingsModal from 'components/Modals/SettingsModal';
 
 // FontAwesome Icons for the Mobile Menu
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

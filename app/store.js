@@ -4,8 +4,8 @@ import { combineReducers } from 'redux';
 import storage from 'redux-persist/lib/storage';
 
 // Slices
-import counterReducer from '../features/counter/counterSlice';
-import userSlice from '../features/user/userSlice';
+import counterReducer from 'features/counter/counterSlice';
+import userSlice from 'features/user/userSlice';
 
 const rootReducer = combineReducers({
 	user: userSlice,
