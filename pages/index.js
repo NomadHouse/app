@@ -1,4 +1,4 @@
-import Header from '../components/Header/CustomHeader';
+import Header from 'components/Header/CustomHeader';
 import MarketPlace from 'components/Marketplace/index';
 import PageTitle from 'components/Typography/PageTitle'
 
