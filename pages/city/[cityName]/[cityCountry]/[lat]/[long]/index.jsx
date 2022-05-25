@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 
 import { Map, Marker, ZoomControl, Overlay } from 'pigeon-maps';
 import MarketPlaceSearchBar from 'components/Marketplace/SearchBar';
-import BackBtnIcon from 'components/Buttons/BackBtnIcon';
+import BackBtnIcon from 'components/Navigation/BackBtn';
 import PropertyCard from 'components/Properties/PropertyCard';
 import PropertyCardsWrapper from 'components/UI/PropertyCardsWrapper';
 
@@ -21,8 +21,8 @@ const CityPage = () => {
 	return (
 		<div>
 			<PageTitle title={`${cityName}, ${cityCountry}`} />
-			<div>
-				<Map defaultCenter={[Number(lat), Number(long)]} defaultZoom={13}>
+			<div className='w-auto h-3/5 pb-10'>
+				<Map defaultCenter={[Number(lat), Number(long)]} defaultZoom={11.5}>
 					<ZoomControl />
 					{specificProperties[0]?.properties.map((property) => {
 						return (
@@ -43,7 +43,6 @@ const CityPage = () => {
 			<div className="overflow-y-auto" style={{ height: '600px' }}>
 				<PropertyCardsWrapper>
 					{specificProperties[0]?.properties.map((property) => {
-						console.log(property);
 						return (
 							<PropertyCard
 								key={property.id}

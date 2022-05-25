@@ -5,12 +5,13 @@ import { useState } from 'react';
 
 import { listings } from 'data/listings';
 import Header from 'components/Header/CustomHeader';
-import ContentWrapper from 'components/UI/ContentWrapper';
-import PageTitle from 'components/Typography/PageTitle';
 import ListingMap from 'components/ListingMap';
 import Image from 'next/image';
-import { Button, Checkbox } from 'web3uikit';
-import BackBtnIcon from 'components/Buttons/BackBtnIcon';
+import { Button, Checkbox, Dropdown } from 'web3uikit';
+
+// TODO: Fix Map display
+// TODO: Add inveted triangle li bullets
+// TODO: Fetch available weeks from listing NFT metadata
 
 export const getStaticProps = async ({ params }) => {
 	const listingsList = listings.filter((p) => p.id.toString() === params.id);
@@ -30,51 +31,61 @@ export const getStaticPaths = async () => {
 
 const Listing = ({ listing }) => {
 	const [isLoading, setIsLoading] = useState(false);
+	const [tosAccepted, setTosAccepted] = useState(false);
+
 	return (
-		<>
-			<BackBtnIcon/>
-			<Header title="Listing | NomadHouse" />
-
-			<div className="flex-row gap-3 my-4">
-				<div className="w-1/2">
-					<Image src={listing.imageFile} width={900} height={600} />
-					<ListingMap lat={listing.lat} long={listing.long} />
+		<div className="grid grid-cols-wrap gap-4 md:grid-cols-3 sm:grid-cols-1">
+			{/* <ListingImages/>  */}
+			<div className="md:col-span-2 sm:col-span-1">
+				<Image src={listing.imageFile} width={900} height={600} />
+				<div className="hidden md:block w-auto h-3/5">
+					<ListingMap lat={Number(listing.lat)} long={Number(listing.long)} />
 				</div>
-				<PageTitle className="w-2/5" title={listing.address} />
-				<p>{listing.description}</p>
-
-				<div className="my-4">
-					<ol>
+			</div>
+			<div className="col-span-1 space-y-4 mb-8">
+				<div className="space-y-4 mb-4">
+					<h1 className="text-4xl">{listing.address}</h1>
+					<h2 className="text-xl">{listing.description}</h2>
+					<span>
+						{/* <Dropdown /> */}
+						<h2 className="text-xl font-bold my-4">Share: $DATE</h2>
+					</span>
+					<Header title="Listing | NomadHouse" />
+					<ul className="list-disc mx-4 py-4 text-md space-y-2">
 						<li>{listing.price} investment</li>
-						<li></li>
+						<li> $20 / month dues subsciption</li>
 						<li>0% Transaction fee</li>
-					</ol>
+					</ul>
 				</div>
 				<Checkbox
 					id="tos-checkbox"
 					label={
 						<div>
 							I have read the{' '}
-							<a href="/tos" target="_blank">
+							<a
+								href="https://gateway.pinata.cloud/ipfs/QmaWJMaPnNnPnSdVMy5DRDE1funjMcJQuLhbSDuYuZmzG1"
+								target="_blank"
+							>
 								<u>Terms & Conditions</u>
 							</a>
 						</div>
 					}
-					onChange={() => {}}
+					onChange={() => setTosAccepted(!tosAccepted)}
 				/>
 				<Button
+					className="m-8"
 					id="purchase-button-primary"
-					onClick={() => {
-						setIsLoading(true);
-					}}
+					onClick={() => setIsLoading(true)}
 					text="Confirm Payment"
 					theme="colored"
-					color="#9d5af4"
+					color="blue"
 					isLoading={isLoading}
+					disabled={!tosAccepted}
 					loadingText="Purchasing..."
+					isTransparent="false"
 				/>
 			</div>
-		</>
+		</div>
 	);
 };
 
