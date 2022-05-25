@@ -7,7 +7,7 @@ const MarketPlaceCard = ({ ranking, mbps, city, country, weather, price, image, 
 	return (
 		<Link key={city.id} href={href} passHref>
 			<div
-				className={`bg-blue-300 w-auto h-auto rounded-xl p-6 m-4 space-y-4 text-white bg-cover bg-opacity-10 ${image}`}
+				className={`bg-blue-300 w-auto h-auto rounded-xl p-6 m-4 space-y-4 text-white bg-cover bg-opacity-10 cursor-pointer ${image}`}
 			>
 				{/* Top information */}
 				<div className="flex justify-between text-shadow shadow-black pb-12">

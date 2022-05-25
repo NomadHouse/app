@@ -12,7 +12,7 @@ Live dev build: [HERE](https://development--nomad-house.netlify.app)
 
 -   Marketplace
 -   Wallet based authentication
--   Property Search
+-   Listing fractional NFTs for-sale
 
 ## Roadmap
 

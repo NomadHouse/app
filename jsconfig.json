@@ -1,0 +1,7 @@
+// jsconfig.json
+{
+	"compilerOptions": {
+		"baseUrl": "." // absolute imports
+	},
+	"exclude": ["node_modules", "**/node_modules/*"]
+}
