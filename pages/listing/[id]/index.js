@@ -37,7 +37,7 @@ const Listing = ({ listing }) => {
 		<div className="grid grid-cols-wrap gap-4 md:grid-cols-3 sm:grid-cols-1">
 			{/* <ListingImages/>  */}
 			<div className="md:col-span-2 sm:col-span-1">
-				<Image src={listing.imageFile} width={900} height={600} />
+				<Image alt='' src={listing.imageFile} width={900} height={600} />
 				<div className="hidden md:block w-auto h-3/5">
 					<ListingMap lat={Number(listing.lat)} long={Number(listing.long)} />
 				</div>
@@ -65,6 +65,7 @@ const Listing = ({ listing }) => {
 							<a
 								href="https://gateway.pinata.cloud/ipfs/QmaWJMaPnNnPnSdVMy5DRDE1funjMcJQuLhbSDuYuZmzG1"
 								target="_blank"
+								rel="noreferrer"
 							>
 								<u>Terms & Conditions</u>
 							</a>
