@@ -4,7 +4,7 @@ const BecomeASeller = () => {
 	return (
 		<>
 			<Header title="Become a seller | NomadHouse" />
-			<div>BecomeASeller</div>
+			<div>Coming Soon!</div>
 		</>
 	);
 };

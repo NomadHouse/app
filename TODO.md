@@ -1,6 +1,1 @@
-- Plumb purchase button to moralis (https://docs.moralis.io/moralis-dapp/sending-assets/transfer-nfts)
-- CSS Cleanup
-- Fix maps
-- Back button handler
-- Build Portfolio page
-- Cleanup data + fetching
+- [ ] Merge data fetching styles

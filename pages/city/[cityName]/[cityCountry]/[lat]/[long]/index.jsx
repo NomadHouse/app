@@ -1,13 +1,10 @@
 import { useRouter } from 'next/router';
 
 import { Map, Marker, ZoomControl, Overlay } from 'pigeon-maps';
-import MarketPlaceSearchBar from 'components/Marketplace/SearchBar';
-import BackBtnIcon from 'components/Navigation/BackBtn';
 import PropertyCard from 'components/Properties/PropertyCard';
 import PropertyCardsWrapper from 'components/UI/PropertyCardsWrapper';
 
 import properties from 'propertyData.json';
-import MapCitiesWrapper from 'components/UI/MapCitiesWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import PageTitle from 'components/Typography/PageTitle';
