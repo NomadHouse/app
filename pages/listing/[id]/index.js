@@ -8,9 +8,10 @@ import Header from 'components/Header/CustomHeader';
 import ListingMap from 'components/ListingMap';
 import Image from 'next/image';
 import { Button, Checkbox, Dropdown } from 'web3uikit';
+import { useMoralis, useWeb3Transfer} from 'react-moralis';
+import Moralis from 'moralis';
 
 // TODO: Fix Map display
-// TODO: Add inveted triangle li bullets
 // TODO: Fetch available weeks from listing NFT metadata
 
 export const getStaticProps = async ({ params }) => {
@@ -33,14 +34,21 @@ const Listing = ({ listing }) => {
 	const [isLoading, setIsLoading] = useState(false);
 	const [tosAccepted, setTosAccepted] = useState(false);
 
+	const { user, isAuthenticated } = useMoralis();
+
+	const { fetch, error, isFetching } = useWeb3Transfer({
+		type: 'erc721',
+		receiver: `{user.get('ethaddress')}`,
+		contractAddress: `{listing.contractAddress}`,
+		tokenId: `{listing.weekNum}`,
+	});
+
 	return (
 		<div className="grid grid-cols-wrap gap-4 md:grid-cols-3 sm:grid-cols-1">
 			{/* <ListingImages/>  */}
 			<div className="md:col-span-2 sm:col-span-1">
 				<Image src={listing.imageFile} width={900} height={600} />
-				<div className="hidden md:block w-auto h-3/5">
-					<ListingMap lat={Number(listing.lat)} long={Number(listing.long)} />
-				</div>
+				<ListingMap lat={Number(listing.lat)} long={Number(listing.long)} />
 			</div>
 			<div className="col-span-1 space-y-4 mb-8">
 				<div className="space-y-4 mb-4">
@@ -75,11 +83,21 @@ const Listing = ({ listing }) => {
 				<Button
 					className="m-8"
 					id="purchase-button-primary"
-					onClick={() => setIsLoading(true)}
+					onClick={async () => {
+						await Moralis.enableWeb3();
+						fetch({
+							onSuccess: () => {
+								console.log('success');
+							},
+							onError: () => {
+								console.log({error});
+							},
+						});
+					}}
 					text="Confirm Payment"
 					theme="colored"
 					color="blue"
-					isLoading={isLoading}
+					isLoading={isFetching}
 					disabled={!tosAccepted}
 					loadingText="Purchasing..."
 					isTransparent="false"
