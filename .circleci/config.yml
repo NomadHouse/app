@@ -16,9 +16,6 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: Install SWC for linux arch
-          command: npm install @next/swc-linux-x64-gnu
-      - run:
           name: Run tests
           command: npm run test
 
