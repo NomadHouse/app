@@ -64,7 +64,6 @@ const Listing = ({ listing }) => {
 	useEffect(() => {
 		enableWeb3();
 		fetchAvailableShares();
-		
 	}, [user]);
 
 	return (
@@ -125,7 +124,7 @@ const Listing = ({ listing }) => {
 					className="m-8"
 					id="purchase-button-primary"
 					onClick={async () => await buyShare()}
-					text={!isAuthenticated ? 'Please Connect Wallet' : 'Confirm Payment'}
+					text={!isAuthenticated ? 'Please Connect Wallet' : 'Buy Now'}
 					theme="colored"
 					color="blue"
 					isLoading={isBuyLoading}
