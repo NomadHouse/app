@@ -9,6 +9,7 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.38879,
 		long: 2.15899,
+		contractAddress: "0xf1AF3f6C6386F57156BE2A7BbeddDe68F6Bd7e29"
 	},
 	{
 		id: 2,
@@ -20,6 +21,7 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.415392,
 		long: 2.202586,
+		contractAddress: ""
 	},
 	{
 		id: 3,
@@ -31,6 +33,7 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.408496,
 		long: 2.153532,
+		contractAddress: ""
 	},
 	{
 		id: 4,
@@ -42,6 +45,7 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.386283,
 		long: 2.151268,
+		contractAddress: ""
 	},
 	{
 		id: 5,
@@ -53,6 +57,7 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.380671,
 		long: 2.172912,
+		contractAddress: ""
 	},
 	{
 		id: 6,
@@ -64,5 +69,6 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.392228,
 		long: 2.197867,
+		contractAddress: ""
 	},
 ];
