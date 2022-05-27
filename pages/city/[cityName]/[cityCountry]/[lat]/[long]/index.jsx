@@ -1,13 +1,10 @@
 import { useRouter } from 'next/router';
 
 import { Map, Marker, ZoomControl, Overlay } from 'pigeon-maps';
-import MarketPlaceSearchBar from 'components/Marketplace/SearchBar';
-import BackBtnIcon from 'components/Navigation/BackBtn';
 import PropertyCard from 'components/Properties/PropertyCard';
 import PropertyCardsWrapper from 'components/UI/PropertyCardsWrapper';
 
 import properties from 'propertyData.json';
-import MapCitiesWrapper from 'components/UI/MapCitiesWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import PageTitle from 'components/Typography/PageTitle';
@@ -21,8 +18,8 @@ const CityPage = () => {
 	return (
 		<div>
 			<PageTitle title={`${cityName}, ${cityCountry}`} />
-			<div className='w-auto h-3/5 pb-10'>
-				<Map defaultCenter={[Number(lat), Number(long)]} defaultZoom={11.5}>
+			<div className="container w-auto my-10 bg-gray-200 border-slate-800 rounded-lg drop-shadow-2xl">
+				<Map defaultCenter={[Number(lat), Number(long)]} height={400} defaultZoom={11.5}>
 					<ZoomControl />
 					{specificProperties[0]?.properties.map((property) => {
 						return (
@@ -39,8 +36,7 @@ const CityPage = () => {
 					})}
 				</Map>
 			</div>
-
-			<div className="overflow-y-auto" style={{ height: '600px' }}>
+			<div className="bg-gray-200 border-slate-800 rounded-lg drop-shadow-2xl">
 				<PropertyCardsWrapper>
 					{specificProperties[0]?.properties.map((property) => {
 						return (
