@@ -15,7 +15,7 @@ const Portfolio = () => {
 			<div className="flex-wrap">
 				<PageTitle title="Portfolio" />
 				<div>
-					<NFTBalance className="my-8" address={user?.get('ethAddress')} chain="eth" />
+					<NFTBalance className="my-8" address={user?.get('ethAddress')} chain="kovan" />
 				</div>
 			</div>
 		</>
