@@ -4,7 +4,7 @@ import PageTitle from 'components/Typography/PageTitle'
 
 export default function Home() {
 	return (
-		<div className='max-w-100 mt-20'>
+		<div className='max-w-100 mt-10'>
 			<Header title="NomadHouse - Home" />
 			<PageTitle title="Inspiration for your next adventure" />
 			<MarketPlace />

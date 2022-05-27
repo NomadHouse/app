@@ -1,11 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { useMoralis } from 'react-moralis';
-
-// Redux Store
-import { setUserWalletAddress } from 'features/user/userSlice';
-import { persistor } from 'app/store';
-import { useDispatch, useSelector } from 'react-redux';
 
 // Setup Modal Library
 import Swal from 'sweetalert2';
@@ -30,10 +25,7 @@ import {
 const Modal = withReactContent(Swal);
 
 const Navbar = () => {
-	const dispatch = useDispatch();
 	const [active, setActive] = useState(false);
-
-	const userWalletAddress = useSelector((state) => state.user.userWalletAddress);
 
 	// * Moralis Wallet login and logout >>>>>>>>>>>>>>>>>>>>>> START
 	const { isAuthenticated, authenticate, authError, logout, user, isAuthenticating } = useMoralis();
@@ -44,48 +36,38 @@ const Navbar = () => {
 				signingMessage: 'Log in using Moralis to NomadHouse.io. Welcome to the next generation of Real State!',
 			})
 				.then(function (user) {
-					dispatch(setUserWalletAddress(user.get('ethAddress')));
+					Modal.fire({
+						width: '40rem',
+						background: '#9d5af4',
+						color: '#ffffff',
+						confirmButtonColor: '#000',
+						showCloseButton: false,
+						showCancelButton: false,
+						title: `Welcome! ...${user.get('ethAddress')}`,
+						text: 'Enjoy your	stay at NomadHouse.io!',
+						confirmButtonText: 'Ok',
+					});
 				})
 				.catch(function (error) {
 					console.error(error);
+					Modal.fire({
+						width: '40rem',
+						icon: 'warning',
+						background: '#ffffff',
+						color: '#000',
+						confirmButtonColor: '#000',
+						showCloseButton: false,
+						showCancelButton: false,
+						title: `Error Code:	${authError?.code}`,
+						text: authError?.message,
+						confirmButtonText: 'Ok',
+					});
 				});
 		}
-		Modal.close();
 	};
-
-	useEffect(() => {
-		if (authError !== null) {
-			Modal.fire({
-				width: '40rem',
-				icon: 'warning',
-				background: '#ffffff',
-				color: '#000',
-				confirmButtonColor: '#000',
-				showCloseButton: false,
-				showCancelButton: false,
-				title: `Error Code:	${authError?.code}`,
-				text: authError?.message,
-				confirmButtonText: 'Ok',
-			});
-		}
-		if (!authError && isAuthenticated && userWalletAddress) {
-			Modal.fire({
-				width: '40rem',
-				background: '#9d5af4',
-				color: '#ffffff',
-				confirmButtonColor: '#000',
-				showCloseButton: false,
-				showCancelButton: false,
-				title: `Welcome! ...${userWalletAddress.slice(30)}`,
-				text: 'Enjoy your	stay at NomadHouse.io!',
-				confirmButtonText: 'Ok',
-			});
-		}
-	}, [authError, isAuthenticated, userWalletAddress]);
 
 	const logoutWallet = async () => {
 		await logout();
-		persistor.purge();
 	};
 	// * Moralis Wallet login and logout >>>>>>>>>>>>>>>>>>>>>> END
 
@@ -191,8 +173,19 @@ const Navbar = () => {
 				</div>
 			</div>
 			{/* <!-- mobile menu --> */}
-			<div className={`${active ? 'flex' : 'hidden'} px-12 h-screen w-screen absolute bg-violet`}>
+			<div className={`${active ? 'flex' : 'hidden'} px-12 h-9/10 w-screen absolute bg-violet z-50`}>
 				<ul className="">
+					<li>
+						<button onClick={walletConnection}>
+							<div className="flex items-center">
+								<span>
+									<FontAwesomeIcon icon={faWallet} style={{ fontSize: '20px' }} />
+								</span>
+								<p className="block text-sm px-4 py-4 font-semibold cursor-pointer">Connect Wallet</p>
+							</div>
+						</button>
+						<hr/>
+					</li>
 					<li>
 						<button onClick={closeMenu}>
 							<Link href="/" passHref>
@@ -229,16 +222,6 @@ const Navbar = () => {
 									</p>
 								</div>
 							</Link>
-						</button>
-					</li>
-					<li>
-						<button onClick={walletConnection}>
-							<div className="flex items-center">
-								<span>
-									<FontAwesomeIcon icon={faWallet} style={{ fontSize: '20px' }} />
-								</span>
-								<p className="block text-sm px-4 py-4 font-semibold cursor-pointer">Connect Wallet</p>
-							</div>
 						</button>
 					</li>
 					<li>
