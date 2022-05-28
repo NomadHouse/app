@@ -9,7 +9,7 @@ export const listings = [
 		propertyManager: 'Nuñez y Navarro',
 		lat: 41.38879,
 		long: 2.15899,
-		contractAddress: "0xf1AF3f6C6386F57156BE2A7BbeddDe68F6Bd7e29"
+		contractAddress: "0x90ec68bA282360B2C97B0E51fc9ff2911b9f89fC"
 	},
 	{
 		id: 2,

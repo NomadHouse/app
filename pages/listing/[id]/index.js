@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
+import { useMoralis, useWeb3ExecuteFunction } from 'react-moralis';
 
 import Image from 'next/image';
 import { Button, Checkbox, Dropdown } from 'web3uikit';
-import { useMoralis, useWeb3ExecuteFunction } from 'react-moralis';
-import moment from 'moment';
 
 import Header from 'components/Header/CustomHeader';
 import ListingMap from 'components/ListingMap';
@@ -36,13 +35,14 @@ const Listing = ({ listing }) => {
 	const {
 		error: buyError,
 		fetch: buyShare,
-		isLoading: isBuyLoading
+		isLoading: isBuyLoading,
 	} = useWeb3ExecuteFunction({
 		abi: ABI,
 		contractAddress: listing.contractAddress,
 		functionName: 'buy',
+		msgValue: Moralis.Units.ETH('0.000000000000000001'),
 		params: {
-			listingId: listing.id,
+			listingId: purchaseWeek,
 		},
 	});
 
@@ -64,6 +64,7 @@ const Listing = ({ listing }) => {
 	useEffect(() => {
 		enableWeb3();
 		fetchAvailableShares();
+		console.log(sharesAvailable);
 	}, [user]);
 
 	return (
@@ -92,7 +93,12 @@ const Listing = ({ listing }) => {
 							Share:{' '}
 							<Dropdown
 								icon={'calendar'}
-								options={[{ id: 1 }]}
+								options={[
+									{ id: 1, label: 'Week 1' },
+									{ id: 2, label: 'Week 2' },
+									{ id: 3, label: 'Week 3' },
+									{ id: 4, label: 'Week 4' },
+								]}
 								onChange={(selectedOption) => setPurchaseWeek(selectedOption.id)}
 							/>
 						</h2>
